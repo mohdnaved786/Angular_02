@@ -1,0 +1,15 @@
+<h1 class="text-center text-primary">HOME PAGE</h1>
+<div class="container-fluid">
+    <div class="row mt-5">
+        <div class="col-lg-3 col-md-4 col-12" *ngFor="let data of carsdata;">
+            <div class="card">
+                <img src= {{data.image}} class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{data.heading}}</h5>
+                  <p class="card-text">{{data.para}}</p>
+                  <a href="#" class="btn btn-primary">{{data.button}}</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
