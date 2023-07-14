@@ -33,5 +33,9 @@ export class HomeComponent {
       button: 'Go Somewhere'
     },
   ]
+  // count = 0
+  // counter(type:string){
+  //   type==='add' ?this.count++:this.count--;
+  // }
 
 }
