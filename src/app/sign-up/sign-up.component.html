@@ -1,39 +1,42 @@
 <div class="container mt-5">
-    <h1>Student Form</h1>
-    <form class="row g-3 needs-validation" [formGroup]="studentReactiveForm" (ngSubmit)="submitStudentForm()" >
+    <h1 class="text-center mb-4 text-success">Student Form</h1>
+    <form class="row g-3 needs-validation" [formGroup]="studentReactiveForm" (ngSubmit)="submitStudentForm()">
         <div class="col-md-4">
             <label for="validationCustom01" class="form-label">First name</label>
-            <input type="text" class="form-control" formControlName="firstName"  
+            <input type="text" class="form-control" formControlName="firstName"
                 [class.is-invalid]="!studentReactiveForm.controls['firstName'].valid && studentReactiveForm.controls['firstName'].touched"
                 [class.is-valid]="studentReactiveForm.controls['firstName'].valid" required>
             <div *ngIf="studentReactiveForm.controls['firstName'].valid" class="valid-feedback">
                 Looks good!
             </div>
-            <div *ngIf="!studentReactiveForm.controls['firstName'].valid && studentReactiveForm.controls['firstName'].touched" class="invalid-feedback">
-                    This field is required!
+            <div *ngIf="!studentReactiveForm.controls['firstName'].valid && studentReactiveForm.controls['firstName'].touched"
+                class="invalid-feedback">
+                This field is required!
             </div>
         </div>
         <div class="col-md-4">
             <label for="validationCustom02" class="form-label">Last name</label>
             <input type="text" class="form-control" formControlName="lastName"
-            [class.is-invalid]="!studentReactiveForm.controls['lastName'].valid && studentReactiveForm.controls['lastName'].touched"
-            [class.is-valid]="studentReactiveForm.controls['lastName'].valid" required>
+                [class.is-invalid]="!studentReactiveForm.controls['lastName'].valid && studentReactiveForm.controls['lastName'].touched"
+                [class.is-valid]="studentReactiveForm.controls['lastName'].valid" required>
             <div *ngIf="studentReactiveForm.controls['lastName'].valid" class="valid-feedback">
                 Looks good!
             </div>
-            <div *ngIf="!studentReactiveForm.controls['lastName'].valid && studentReactiveForm.controls['lastName'].touched" class="invalid-feedback">
-                    This field is required!
+            <div *ngIf="!studentReactiveForm.controls['lastName'].valid && studentReactiveForm.controls['lastName'].touched"
+                class="invalid-feedback">
+                This field is required!
             </div>
-        
+
         </div>
         <div class="col-md-4">
             <label for="validationCustomUsername" class="form-label">Username</label>
             <div class="input-group has-validation">
-                <span class="input-group-text" >@</span>
+                <span class="input-group-text">@</span>
                 <input type="text" class="form-control" formControlName="userName" aria-describedby="inputGroupPrepend"
                     [class.is-invalid]="!studentReactiveForm.controls['userName'].valid && studentReactiveForm.controls['userName'].touched"
-                    [class.is-valid]="studentReactiveForm.controls['userName'].valid"  required>
-                <div *ngIf="!studentReactiveForm.controls['userName'].valid && studentReactiveForm.controls['userName'].touched" class="invalid-feedback">
+                    [class.is-valid]="studentReactiveForm.controls['userName'].valid" required>
+                <div *ngIf="!studentReactiveForm.controls['userName'].valid && studentReactiveForm.controls['userName'].touched"
+                    class="invalid-feedback">
                     Please choose a username.
                 </div>
                 <div *ngIf="studentReactiveForm.controls['userName'].valid" class="valid-feedback">
@@ -43,56 +46,60 @@
         </div>
         <div class="col-md-4">
             <label for="validationCustom01" class="form-label">Your Password</label>
-            <input type="password" class="form-control" formControlName="password"  
+            <input type="password" class="form-control" formControlName="password"
                 [class.is-invalid]="!studentReactiveForm.controls['password'].valid && studentReactiveForm.controls['password'].touched"
                 [class.is-valid]="studentReactiveForm.controls['password'].valid" required>
             <div *ngIf="studentReactiveForm.controls['password'].valid" class="valid-feedback">
                 Looks good!
             </div>
-            <div *ngIf="!studentReactiveForm.controls['password'].valid && studentReactiveForm.controls['password'].touched" class="invalid-feedback">
-                    This field is required!
+            <div *ngIf="!studentReactiveForm.controls['password'].valid && studentReactiveForm.controls['password'].touched"
+                class="invalid-feedback">
+                This field is required!
             </div>
         </div>
         <div class="col-md-4">
             <label for="validationCustom01" class="form-label">Mobile Nuber</label>
-            <input type="text" class="form-control" formControlName="mobileNumber"  
+            <input type="text" class="form-control" formControlName="mobileNumber"
                 [class.is-invalid]="!studentReactiveForm.controls['mobileNumber'].valid && studentReactiveForm.controls['mobileNumber'].touched"
                 [class.is-valid]="studentReactiveForm.controls['mobileNumber'].valid" required>
             <div *ngIf="studentReactiveForm.controls['mobileNumber'].valid" class="valid-feedback">
                 Looks good!
             </div>
-            <div *ngIf="!studentReactiveForm.controls['mobileNumber'].valid && studentReactiveForm.controls['mobileNumber'].touched" class="invalid-feedback">
-                    This field is required!
+            <div *ngIf="!studentReactiveForm.controls['mobileNumber'].valid && studentReactiveForm.controls['mobileNumber'].touched"
+                class="invalid-feedback">
+                This field is required!
             </div>
         </div>
         <div class="col-md-4">
             <label for="validationCustom01" class="form-label">Address</label>
-            <input type="text" class="form-control" formControlName="address"  
+            <input type="text" class="form-control" formControlName="address"
                 [class.is-invalid]="!studentReactiveForm.controls['address'].valid && studentReactiveForm.controls['address'].touched"
                 [class.is-valid]="studentReactiveForm.controls['address'].valid" required>
             <div *ngIf="studentReactiveForm.controls['address'].valid" class="valid-feedback">
                 Looks good!
             </div>
-            <div *ngIf="!studentReactiveForm.controls['address'].valid && studentReactiveForm.controls['address'].touched" class="invalid-feedback">
-                    This field is required!
+            <div *ngIf="!studentReactiveForm.controls['address'].valid && studentReactiveForm.controls['address'].touched"
+                class="invalid-feedback">
+                This field is required!
             </div>
         </div>
         <div class="col-md-4">
             <label for="validationCustom03" class="form-label">City</label>
-            <input type="text" class="form-control"  formControlName="city"
-            [class.is-invalid]="!studentReactiveForm.controls['city'].valid && studentReactiveForm.controls['city'].touched"
-            [class.is-valid]="studentReactiveForm.controls['city'].valid"  required>
-          
+            <input type="text" class="form-control" formControlName="city"
+                [class.is-invalid]="!studentReactiveForm.controls['city'].valid && studentReactiveForm.controls['city'].touched"
+                [class.is-valid]="studentReactiveForm.controls['city'].valid" required>
+
             <div *ngIf="studentReactiveForm.controls['city'].valid" class="valid-feedback">
                 Looks good!
             </div>
-            <div *ngIf="!studentReactiveForm.controls['city'].valid && studentReactiveForm.controls['city'].touched" class="invalid-feedback">
+            <div *ngIf="!studentReactiveForm.controls['city'].valid && studentReactiveForm.controls['city'].touched"
+                class="invalid-feedback">
                 Please provide a valid city.
             </div>
         </div>
         <div class="col-md-3">
             <label for="validationCustom04" class="form-label">Country</label>
-            <select class="form-select"  formControlName="country">
+            <select class="form-select" formControlName="country">
                 <option selected disabled value="">Choose...</option>
                 <option value="india">India</option>
                 <option value="uae">UAE</option>
@@ -106,12 +113,13 @@
         <div class="col-md-3">
             <label for="validationCustom05" class="form-label">Zip</label>
             <input type="number" class="form-control" formControlName="zip"
-            [class.is-invalid]="!studentReactiveForm.controls['zip'].valid && studentReactiveForm.controls['zip'].touched"
-            [class.is-valid]="studentReactiveForm.controls['zip'].valid" required>
+                [class.is-invalid]="!studentReactiveForm.controls['zip'].valid && studentReactiveForm.controls['zip'].touched"
+                [class.is-valid]="studentReactiveForm.controls['zip'].valid" required>
             <div *ngIf="studentReactiveForm.controls['zip'].valid" class="valid-feedback">
                 Looks good!
             </div>
-            <div *ngIf="!studentReactiveForm.controls['zip'].valid && studentReactiveForm.controls['zip'].touched" class="invalid-feedback">
+            <div *ngIf="!studentReactiveForm.controls['zip'].valid && studentReactiveForm.controls['zip'].touched"
+                class="invalid-feedback">
                 Please provide a valid zip.
             </div>
         </div>
@@ -120,32 +128,38 @@
         </div>
     </form>
 
-    <br/>
+    <br />
     <!-- After Hit Submit Form -->
     <table class="table" *ngIf="myData.length > 0">
         <thead>
             <caption>Students</caption>
-          <tr>
-            <th scope="col">Sr No.</th>
-            <th scope="col">First Name</th>
-            <th scope="col">Last Name</th>
-            <th scope="col">UserName</th>
-            <th scope="col">City</th>
-            <th scope="col">Country</th>
-            <th scope="col">Zip</th>
-          </tr>
+            <tr>
+                <th scope="col">Sr No.</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">UserName</th>
+                <th scope="col">Password</th>
+                <th scope="col">Mobile Number</th>
+                <th scope="col">Address</th>
+                <th scope="col">City</th>
+                <th scope="col">Country</th>
+                <th scope="col">Zip</th>
+            </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let data of myData; let i = index">
-            <td>{{i+1}}</td>
-            <td>{{data.firstName}}</td>
-            <td>{{data.lastName}}</td>
-            <td>{{data.userName}}</td>
-            <td>{{data.city}}</td>
-            <td>{{data.country}}</td>
-            <td>{{data.zip}}</td>
-          </tr>
+            <tr *ngFor="let data of myData; let i = index">
+                <td>{{i+1}}</td>
+                <td>{{data.firstName}}</td>
+                <td>{{data.lastName}}</td>
+                <td>{{data.userName}}</td>
+                <td>{{data.password}}</td>
+                <td>{{data.mobileNumber}}</td>
+                <td>{{data.address}}</td>
+                <td>{{data.city}}</td>
+                <td>{{data.country}}</td>
+                <td>{{data.zip}}</td>
+            </tr>
         </tbody>
-      </table>
+    </table>
 
 </div>

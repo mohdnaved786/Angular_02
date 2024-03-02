@@ -1,15 +1,58 @@
-<h1 class="text-center text-danger">BLOG PAGE</h1>
-<div class="container-fluid">
-    <div class="row mt-5">
-        <div class="col-lg-3 col-md-4 col-12" *ngFor="let data of carsdata;">
-            <div class="card">
-                <img src= {{data.image}} class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">{{data.heading}}</h5>
-                  <p class="card-text">{{data.para}}</p>
-                  <a href="#" class="btn btn-primary">{{data.button}}</a>
-                </div>
-              </div>
-        </div>
+<!-- <div class="container mt-5">
+  <form class="row g-3" [formGroup]="finalReactiveForm" (ngSubmit)="finalSubmitForm()">
+    <div class="col-md-4">
+      <label class="form-label">First name</label>
+      <input type="text" class="form-control" formControlName="firstName"
+      [class.is-invalid]="!finalReactiveForm.controls['firstName'].valid && finalReactiveForm.controls['firstName'].touched"
+      [class.is-valid]="finalReactiveForm.controls['firstName'].valid" required>
+      <div *ngIf="finalReactiveForm.controls['firstName'].valid" class="valid-feedback">
+        OK!
+      </div>
+      <div *ngIf="!finalReactiveForm.controls['firstName'].valid && finalReactiveForm.controls['firstName'].touched" class="invalid-feedback">
+        Not Ok!
+      </div>
     </div>
-</div>
+    <div class="col-md-4">
+      <label class="form-label">First name</label>
+      <input type="text" class="form-control" formControlName="lastName"
+       [class.is-invalid]="!finalReactiveForm.controls['lastName'].valid && finalReactiveForm.controls['lastName'].touched" 
+       [class.is-valid]="finalReactiveForm.controls['lastName'].valid" required>
+      <div *ngIf="finalReactiveForm.controls['lastName'].valid" class="valid-feedback">
+        Looks good!
+      </div>
+      <div *ngIf="!finalReactiveForm.controls['lastName'].valid && finalReactiveForm.controls['lastName'].touched" class="invalid-feedback">
+        Not Ok!
+      </div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Submit form</button>
+    </div>
+  </form>
+</div> -->
+
+
+ <!-- 1==> Interpolation -->
+
+<!-- <h1>My Name Is {{data}}</h1><br>
+{{"welcome " + data}}<br>
+{{data.length}}<br>
+{{data.toUpperCase()}}<br>
+{{myMethod()}}<br>
+My App Status is {{appStatus? "Online" : "Offline"}}<br>
+My App Status is {{appStatus? status1 : status2}} -->
+
+ <!-- 2==> Property Binding -->
+
+ <!-- <input type="text" [disabled]="false" [value]="appStatus? status1 : status2">
+ <br>
+ <br>
+ <input type="text" [hidden]="!true" bind-value="data"> -->
+
+ <!-- <div [ngClass]="myClass">
+  Class Binding
+ </div> -->
+
+ <!-- Two Way Data Binding -->
+ 
+<!-- <input type="text" value="Angular" [(ngModel)]="uname">
+ <p>{{uname}}</p> -->

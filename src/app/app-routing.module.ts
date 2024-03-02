@@ -8,6 +8,10 @@ import { ClickDynamicCardComponent } from './click-dynamic-card/click-dynamic-ca
 import { DynamicCardComponent } from './dynamic-card/dynamic-card.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { MushahidComponent } from './mushahid/mushahid.component';
+import { NewTaskComponent } from './new-task/new-task.component';
+import { LoginComponent } from './login/login.component';
+import { PeginatorComponent } from './peginator/peginator.component';
+import { DynamicExampleComponent } from './dynamic-example/dynamic-example.component';
 
 const routes: Routes = [
   {
@@ -33,6 +37,21 @@ const routes: Routes = [
   },
   {
     path: 'mushahid',  component:MushahidComponent
+  },
+  {
+    path: 'new-task',  component:NewTaskComponent
+  },
+  {
+    path: 'login',  component:LoginComponent
+  },
+  {
+    path: 'signup',  component:SignUpComponent
+  },
+  {
+    path: 'peginator',  component:PeginatorComponent
+  },
+  {
+    path: 'dynamic-example',  component:DynamicExampleComponent
   }
 ];
 

@@ -1,11 +1,18 @@
 import { Component } from '@angular/core';
+import {MatButtonModule} from '@angular/material/button';
+import {NgIf} from '@angular/common';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  standalone: true,
+  imports: [MatSidenavModule, NgIf, MatButtonModule],
 })
 export class HomeComponent {
+
+  showFiller = false;
 
   carsdata = [
     {

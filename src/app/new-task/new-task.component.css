@@ -1,0 +1,75 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+ul {
+    margin: 0;
+    padding: 0;
+    gap: 6px;
+    padding-bottom: 12px;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li i {
+    color: #e5cb00;
+}
+
+.card-body {
+    padding: 10px 41px;
+}
+
+.card-body h5 {
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+.card-footer-img {
+    gap: 12px;
+}
+
+.card-footer-img img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+select {
+    background-color: #4e4a59;
+    color: white;
+    border: none;
+    padding: 14px;
+}
+
+.malik {
+    background-color: #37353d;
+
+}
+
+.mx-auto {
+    margin: auto;
+}
+
+h3 {
+    padding-left: 1.5rem;
+    position: relative;
+    bottom: 8px;
+    font-size: 14px;
+    margin: auto;
+}
+
+.icon {
+    font-size: 20px;
+    position: relative;
+    gap: 1.5rem;
+    color: rgb(144, 141, 141);
+}
+
+.saqft {
+    font-size: 20px;
+}
+
+.footer-button button{
+    padding: 10px 130px;
+    background-color: #878fd6;
+}

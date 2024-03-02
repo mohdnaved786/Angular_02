@@ -1,37 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {FormGroup , FormBuilder , Validators} from '@angular/forms'
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
-export class AboutComponent {
+export class AboutComponent implements OnInit {
 
-  carsdata = [
-    {
-      image: 'https://media.zigcdn.com/media/content/2019/Sep/2021-bugatti-chiron-super-sport-300-zw1_720x540.jpg',
-      heading: 'Card title',
-      para: 'Some quick example text to build on the card title and make up the bulk of the card content.',
-      button: 'Go Somewhere'
-    },
-    {
-      image: 'https://media.zigcdn.com/media/content/2019/Sep/2021-bugatti-chiron-super-sport-300-zw1_720x540.jpg',
-      heading: 'Card title',
-      para: 'Some quick example text to build on the card title and make up the bulk of the card content.',
-      button: 'Go Somewhere'
-    },
-    {
-      image: 'https://media.zigcdn.com/media/content/2019/Sep/2021-bugatti-chiron-super-sport-300-zw1_720x540.jpg',
-      heading: 'Card title',
-      para: 'Some quick example text to build on the card title and make up the bulk of the card content.',
-      button: 'Go Somewhere'
-    },
-    {
-      image: 'https://media.zigcdn.com/media/content/2019/Sep/2021-bugatti-chiron-super-sport-300-zw1_720x540.jpg',
-      heading: 'Card title',
-      para: 'Some quick example text to build on the card title and make up the bulk of the card content.',
-      button: 'Go Somewhere'
-    },
-  ]
+  navedReactiveForm!: FormGroup;
+  constructor(private frombuilder: FormBuilder){}
+
+  ngOnInit(): void {
+    this.navedForm();
+  }
+
+  navedForm(){
+    this.navedReactiveForm = this.frombuilder.group({
+      'firstName' : [null , [Validators.required]],
+      'lastName' : [null , [Validators.required]]
+    })
+  }
+
+  navedSubmitForm(){
+    console.log("my data value===>", this.navedReactiveForm.value)
+  }
 
 }

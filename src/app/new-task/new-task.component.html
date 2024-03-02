@@ -1,0 +1,73 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8 col-md-6 col-12">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6 col-12" *ngFor="let data of carddata;">
+                    <div class="card">
+                        <img src={{data.image}} class="card-img-top" alt="..." style="height: 200px;">
+                        <div class="card-body">
+                            <h5 class="card-title">{{data.mainheading}}</h5>
+                            <ul class="d-flex cardrating">
+                                <li><i class="bi bi-star-fill"></i></li>
+                                <li><i class="bi bi-star-fill"></i></li>
+                                <li><i class="bi bi-star-fill"></i></li>
+                                <li><i class="bi bi-star-fill"></i></li>
+                                <li><i class="bi bi-star"></i></li>
+                            </ul>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <div class="text-danger">
+                                    <i class="bi bi-heart pe-2"></i>
+                                    <span>{{data.middlecontentone}}</span>
+                                </div>
+                                <div class="text-secondary">
+                                    <i class="bi bi-people-fill pe-2"></i>
+                                    <span>{{data.middlecontenttwo}}</span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="d-flex mt-4 card-footer-img">
+                                <div>
+                                    <img src={{data.footerimage}} alt="" class="img-fluid">
+                                </div>
+                                <div>
+                                    <h5>{{data.footerheading}}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+            <div class="right-list-div">
+                <div class="malik pt-4 pb-4 px-5">
+                    <select class="form-select my-4" *ngFor="let data of listingdata;">
+                        <option selected disabled value="">{{data.select}}</option>
+                        <option value="india">{{data.value1}}</option>
+                        <option value="uae">{{data.value2}}</option>
+                        <option value="dubai">{{data.value3}}</option>
+                        <option value="qatar">{{data.value4}}</option>
+                    </select>
+
+
+                    <div class="d-flex align-items-baseline" *ngFor="let data of checkbox;">
+                        <mat-checkbox></mat-checkbox>
+                        <p class="text-light">{{data.content}}</p>
+                    </div>
+
+                    <p class="text-primary">Options</p>
+
+                    <div class="options">
+                        <div class="d-flex align-items-baseline" *ngFor="let data of secondcheckbox;">
+                            <mat-checkbox></mat-checkbox>
+                            <p class="text-light">{{data.content}}</p>
+                        </div>
+                    </div>
+                    <div class="text-center footer-button">
+                    <button class="btn text-center mt-4 mb-5">SEARCH</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>

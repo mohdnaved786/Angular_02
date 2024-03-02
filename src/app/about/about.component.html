@@ -1,15 +1,31 @@
-<h1 class="text-center text-success">ABOUT PAGE</h1>
-<div class="container-fluid">
-    <div class="row mt-5">
-        <div class="col-lg-3 col-md-4 col-12" *ngFor="let data of carsdata;">
-            <div class="card">
-                <img src= {{data.image}} class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">{{data.heading}}</h5>
-                  <p class="card-text">{{data.para}}</p>
-                  <a href="#" class="btn btn-primary">{{data.button}}</a>
-                </div>
-              </div>
-        </div>
+<div class="container mt-5">
+  <form class="row g-3" [formGroup]="navedReactiveForm" (ngSubmit)="navedSubmitForm()">
+    <div class="col-md-4">
+      <label class="form-label">First name</label>
+      <input type="text" class="form-control" formControlName="firstName"
+       [class.is-invalid]="!navedReactiveForm.controls['firstName'].valid && navedReactiveForm.controls['firstName'].touched" 
+       [class.is-valid]="navedReactiveForm.controls['firstName'].valid" required>
+      <div *ngIf="navedReactiveForm.controls['firstName'].valid" class="valid-feedback">
+        Looks good!
+      </div>
+      <div *ngIf="!navedReactiveForm.controls['firstName'].valid && navedReactiveForm.controls['firstName'].touched" class="invalid-feedback">
+        this field is required.
+      </div>
     </div>
+    <div class="col-md-4">
+      <label class="form-label">Last name</label>
+      <input type="text" class="form-control" formControlName="lastName"
+      [class.is-invalid]="!navedReactiveForm.controls['lastName'].valid && navedReactiveForm.controls['lastName'].touched" 
+      [class.is-valid]="navedReactiveForm.controls['lastName'].valid" required>
+      <div *ngIf="navedReactiveForm.controls['lastName'].valid" class="valid-feedback">
+        Looks good!
+      </div>
+      <div *ngIf="!navedReactiveForm.controls['lastName'].valid && navedReactiveForm.controls['lastName'].touched" class="invalid-feedback">
+        this field is required.
+      </div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Submit form</button>
+    </div>
+  </form>
 </div>

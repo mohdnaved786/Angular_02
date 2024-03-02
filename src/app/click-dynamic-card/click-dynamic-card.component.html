@@ -1,1 +1,28 @@
-<p>click-dynamic-card works!</p>
+<div class="container">
+    <div class="mt-5 text-center">
+        <button type="button" class="btn btn-primary mx-2" (click)="findCar('mobile')">Mobiles</button>
+        <button type="button" class="btn btn-secondary mx-2" (click)="findCar('laptop')">Laptops</button>
+        <button type="button" class="btn btn-success mx-2" (click)="findCar('watch')">Watches</button>
+        <button type="button" class="btn btn-danger mx-2" (click)="findCar('tablet')">Tablets</button>
+        <button type="button" class="btn btn-warning mx-2" (click)="findCar('earbuds')">Earbuds</button>
+        <button type="button" class="btn btn-primary mx-2" (click)="findCar('camera')">Camera's</button>
+        <button type="button" class="btn btn-success mx-2" (click)="findCar('speaker')">Speakers</button>
+    </div>
+    <div class=" mt-5">
+        <div class="row" *ngIf="myFilterData?.length > 0">
+            <div class="col-lg-3 col-md-4 mt-5" *ngFor="let data of myFilterData; let i=index">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{data.image}}" class="card-img-top" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">{{i+1}}. {{data.title}}</h5>
+                      <p class="card-text">{{data.description}}</p>
+                      <a href="#" class="btn btn-primary">{{data.button}}</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div  *ngIf="myFilterData?.length == 0 || myFilterData == undefined">
+            No Filtered Data Found!!!
+        </div>
+    </div>
+</div>
